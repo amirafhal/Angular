@@ -1,0 +1,58 @@
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a style="color: white;margin-left:45%;">Edit Product</a>
+    </div>
+    
+    </nav>
+    
+    
+    
+   
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+        <form [formGroup]="formValue">
+        
+        <div class="formGroup">
+        <label for="Name">Product</label>
+        <input type="text" formControlName="Product"  name="Product" id="Product" class="form-control">
+
+        </div>
+        
+        <div class="formGroup">
+        <label for="Description">Description</label>
+        <textarea type="text" formControlName="Description"  name="Description"  class="form-control"  id="Description"></textarea>
+        </div>
+        
+        <div class="formGroup">
+            <label for="categorie">Catégorie</label>
+            <input type="text" formControlName="Categorie"  name="Categorie" class="form-control" required placeholder="Enter Product Category"  id="Catégorie">
+            </div>
+
+            <div class="formGroup">
+                <label for="Image">Product Image</label>
+                <input type="text" formControlName="Image" name="Image" class="form-control" required placeholder="Enter Product Image URL" id="Image">
+            </div>
+        
+        <div class="formGroup">
+        <label for="prix">Prix</label>
+        <input type="number"  formControlName="prix" class="form-control" name="prix"d placeholder=" Enter Product Price" id="prix">
+        </div>
+
+          <div class="buttons" routerLinkActive="router-link-active">
+            <button type="button" routerLink="/home" class="btn btn-secondary " data-dismiss="modal">Back</button>
+            <button type="button" (click)="updateProductDetails()" routerLink="/home"  class="btn btn-info ml-2">Update</button>
+      
+       
+        </div>
+        
+        </form>
+        
+        </div>
+            </div>
+        </div>
+        
+        
+        
+      
+    

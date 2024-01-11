@@ -1,0 +1,58 @@
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a style="color: white;margin-left:45%;">Add Product</a>
+    </div>
+    
+    </nav>
+    
+    
+    
+   
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+        <form [formGroup]="formValue">
+        
+        <div class="formGroup">
+        <label for="Name">Product</label>
+        <input type="text" formControlName="Product" class="form-control" required placeholder="Enter Product Name"  formControlName="Product" id="Product">
+        </div>
+        
+        <div class="formGroup">
+        <label for="Description">Description</label>
+        <textarea type="text" formControlName="Description" class="form-control" required placeholder="Enter Product Description"  formControlName="Description" id="Description"></textarea>
+        </div>
+        
+        <div class="formGroup">
+            <label for="categorie">Catégorie</label>
+            <input type="text" formControlName="Categorie" class="form-control" required placeholder="Enter Product Category"  formControlName="Categorie" id="Categorie">
+            </div>
+
+            <div class="formGroup">
+                <label for="Image">Product Url</label>
+                <input type="text" formControlName="Image" class="form-control" required placeholder=" Enter Product Url"  formControlName="Image" id="Image">
+                </div>
+        
+        
+        <div class="formGroup">
+        <label for="prix">Prix</label>
+        <input type="number" formControlName="prix" class="form-control" placeholder=" Enter Product Price" formControlName="prix" id="prix" required >
+        </div>
+
+          <div class="buttons">
+        
+        <button type="button" routerLink="/home" routerLinkActive="router-link-active"  class="btn btn-success">View Product</button>
+      
+        <button type="button" (click)="postArticleDetails()"  class="btn btn-primary">Add Product</button>
+        </div>
+        
+        </form>
+        
+        </div>
+            </div>
+        </div>
+        
+        
+        
+      
+    

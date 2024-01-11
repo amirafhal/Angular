@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+             <div class="d-flex">
+              <button class="btn btn-primary" routerLink="/add-product" data-toggle="modal" data-target="#staticBackdrop">Add Product</button>
+             </div>
+          
+            </ul>
+            </div>
+        </div>
+        <div class="mb-lg-0">
+          <form class="d-flex">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search" [(ngModel)]="searchTerm">
+            <button class="btn btn-outline-success" type="button" (click)="onSearch()">Search</button>
+          </form>
+
+        
+      </div>
+     
+  </nav>
+
+
+  <div class="row col-12 mt-4">
+  <div *ngFor="let product of filteredProductData" class="card col-8 offset-1 mb-4" style="max-width:min-content;" >
+    <img [src]="product.Image" class="card-img-top" style="width: 90%; height: 35%;" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.Product}}</h5>
+      <p class="card-text">{{product.Description}}</p>
+      &nbsp;
+      <p class="card-text">{{product.Categorie}}</p>
+      &nbsp;
+    </div>
+
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item" >{{product.prix}} DT</li>
+      </ul>
+    <div class="m-5">
+      <button type="button" (click)="onEdit(product)"  routerLink="/edit-product" class="btn btn-info">Edit</button>
+    <button type="button" (click)="deleteProduct(product)" class="btn btn-danger ">Delete</button>
+  </div>
+</div>
+  </div>
+  
+
+
+  
